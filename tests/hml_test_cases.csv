@@ -1,0 +1,16 @@
+name,aut,ignored,initial,formula,expected
+branching_diamond,data/hml_branching.aut,,0,<a><b>true,SAT
+branching_box_sat,data/hml_branching.aut,,0,[a]<b>true,SAT
+branching_box_unsat,data/hml_branching.aut,,0,[a]<c>true,UNSAT
+box_all_successors,data/hml_box.aut,,0,[a]<b>true,SAT
+box_missing_successor,data/hml_box.aut,,0,[a]<ok>true,UNSAT
+bisim_compressed,data/hml_bisim_compress.aut,,0,<a><b><c>true,SAT
+counterexample_unsat,data/hml_counterexample.aut,,0,[a]<good>true,UNSAT
+counterexample_repair,data/hml_counterexample.aut,,0,<a><repair><good>true,SAT
+action_filter_unfiltered,data/hml_action_filter.aut,,0,<noise><trap>true,SAT
+action_filter_filtered,data/hml_action_filter.aut,noise,0,<noise>true,UNSAT
+chain_skip_goal,data/hml_chain_12.aut,,0,<step><step><step><step><skip><step><step><step><goal>true,SAT
+grid_path,data/hml_grid_3x3.aut,,0,<right><down><down>true,SAT
+grid_box_path,data/hml_grid_3x3.aut,,0,[right][down]<left>true,SAT
+deadlock_vacuous_box,data/hml_deadlock.aut,,1,[z]false,SAT
+deadlock_diamond,data/hml_deadlock.aut,,1,<z>true,UNSAT
